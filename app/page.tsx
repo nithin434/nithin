@@ -37,17 +37,13 @@ export default function Portfolio() {
       const twentyFourHours = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
       
       if (!lastShown || (now - parseInt(lastShown)) > twentyFourHours) {
-        // Log visitor info
+        // Track visitor info for analytics
         try {
           const response = await fetch('https://ipapi.co/json/')
           const data = await response.json()
-          console.log('Portfolio Visitor:', {
-            ip: data.ip,
-            location: `${data.city}, ${data.country_name}`,
-            timestamp: new Date().toISOString()
-          })
+          // Analytics tracking could be added here
         } catch (error) {
-          console.log('IP lookup failed:', error)
+          // IP lookup failed - continue normally
         }
         
         // Show popup after 2 seconds for better UX
