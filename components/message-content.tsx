@@ -26,14 +26,10 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
     try {
       const response = await fetch('https://ipapi.co/json/')
       const data = await response.json()
-      console.log('Portfolio Visitor:', {
-        ip: data.ip,
-        location: `${data.city}, ${data.country_name}`,
-        timestamp: new Date().toISOString()
-      })
+      // Analytics tracking could be added here
       return data
     } catch (error) {
-      console.log('IP lookup failed:', error)
+      // IP lookup failed - continue normally
       return null
     }
   }
