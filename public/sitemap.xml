@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Main Portfolio Page -->
+  <url>
+    <loc>https://nithinjambula.dev/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/og-image.jpg</image:loc>
+      <image:title>Nithin Jambula - Machine Learning Engineer Portfolio</image:title>
+      <image:caption>AI-powered portfolio showcasing ML projects and expertise</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/profile-image.jpg</image:loc>
+      <image:title>Nithin Jambula Profile Photo</image:title>
+      <image:caption>Machine Learning Engineer and AI Specialist</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Projects Section (Virtual URLs for Deep Linking) -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=projects</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Experience Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=experience</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Skills/Tech Stack Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=skills</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Education Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=education</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Certifications Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=certifications</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Gallery Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=gallery</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/car.jpg</image:loc>
+      <image:title>Vulcan - Self Driving EV Car</image:title>
+      <image:caption>Autonomous driving car for campus mobility</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/echo.jpg</image:loc>
+      <image:title>EchoSight Prototype</image:title>
+      <image:caption>Wearable assistive navigation glasses for visually impaired</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/vlan.jpg</image:loc>
+      <image:title>VLaunchpad Demo</image:title>
+      <image:caption>Displaying Vulcan autonomous vehicle at innovation showcase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nithinjambula.dev/vikas.jpg</image:loc>
+      <image:title>Innovation Award 2024</image:title>
+      <image:caption>Vikas 2024 Innovation Challenge winner ceremony</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://nithinjambula.dev/?q=contact</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- CV/Resume -->
+  <url>
+    <loc>https://nithinjambula.dev/CV.pdf</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- External Projects -->
+  <url>
+    <loc>https://nithinjambula.dev/?external=16fps</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

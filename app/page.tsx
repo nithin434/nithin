@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Sidebar } from "@/components/sidebar"
 import { ChatArea } from "@/components/chat-area"
+import { Bot, X, Minimize2, Maximize2 } from "lucide-react"
 
 interface Message {
   role: "user" | "assistant"
@@ -16,6 +17,8 @@ export default function Portfolio() {
   const [messages, setMessages] = useState<Message[]>([])
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isTyping, setIsTyping] = useState(false)
+  const [showAIAgent, setShowAIAgent] = useState(false)
+  const [isAIAgentMinimized, setIsAIAgentMinimized] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
 
   const scrollToBottom = () => {
@@ -25,6 +28,50 @@ export default function Portfolio() {
   useEffect(() => {
     scrollToBottom()
   }, [messages, isTyping])
+
+  // Auto-show AI agent popup once every 24 hours
+  useEffect(() => {
+    const checkAndShowPopup = async () => {
+      const lastShown = localStorage.getItem('aiAgentLastShown')
+      const now = Date.now()
+      const twentyFourHours = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
+      
+      if (!lastShown || (now - parseInt(lastShown)) > twentyFourHours) {
+        // Log visitor info
+        try {
+          const response = await fetch('https://ipapi.co/json/')
+          const data = await response.json()
+          console.log('Portfolio Visitor:', {
+            ip: data.ip,
+            location: `${data.city}, ${data.country_name}`,
+            timestamp: new Date().toISOString()
+          })
+        } catch (error) {
+          console.log('IP lookup failed:', error)
+        }
+        
+        // Show popup after 2 seconds for better UX
+        setTimeout(() => {
+          setShowAIAgent(true)
+          localStorage.setItem('aiAgentLastShown', now.toString())
+        }, 2000)
+      }
+    }
+    
+    checkAndShowPopup()
+  }, [])
+
+  const handleCloseAIAgent = () => {
+    setShowAIAgent(false)
+  }
+
+  const handleMinimizeAIAgent = () => {
+    setIsAIAgentMinimized(true)
+  }
+
+  const handleRestoreAIAgent = () => {
+    setIsAIAgentMinimized(false)
+  }
 
   const generateResponse = (query: string) => {
     const lowerQuery = query.toLowerCase()
@@ -218,6 +265,83 @@ export default function Portfolio() {
         messagesEndRef={messagesEndRef}
         onMobileMenuClick={() => setIsSidebarOpen(true)}
       />
+      
+      {/* Auto AI Agent Popup */}
+      {showAIAgent && !isAIAgentMinimized && (
+        <div className="fixed inset-0 bg-gray-900/30 backdrop-blur-[2px] z-50 flex items-end md:items-center justify-center p-4">
+          <div className="bg-[#2A2B32] border border-gray-600 rounded-xl max-w-lg w-full shadow-2xl animate-in slide-in-from-bottom duration-300">
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <Bot className="text-[#19c37d] animate-pulse" size={20} />
+                  <h3 className="text-white font-bold text-base">🤖 AI Portfolio Agent</h3>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleMinimizeAIAgent}
+                    className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-gray-700 rounded"
+                    title="Minimize"
+                  >
+                    <Minimize2 size={16} />
+                  </button>
+                  <button
+                    onClick={handleCloseAIAgent}
+                    className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-gray-700 rounded"
+                    title="Close"
+                  >
+                    <X size={16} />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="space-y-3 text-sm">
+                <div className="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                  <p className="text-white mb-2">Hey! 👋 I'm Nithin's custom AI agent.</p>
+                  <p className="text-gray-300">Built from his GitHub data (including private repos). Auto-updates with his latest commits.</p>
+                </div>
+                
+                <div className="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                  <p className="text-[#19c37d] font-medium mb-1">💡 Try asking me:</p>
+                  <p className="text-gray-300">"Show projects", "Your experience", "Tech skills" - I know everything about this guy!</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3 mt-4">
+                <button
+                  onClick={handleCloseAIAgent}
+                  className="flex-1 bg-[#19c37d] hover:bg-[#15a066] text-white font-medium py-2 px-4 rounded-lg transition-all text-sm"
+                >
+                  Let's Chat! 💬
+                </button>
+                <button
+                  onClick={handleMinimizeAIAgent}
+                  className="px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors text-sm"
+                >
+                  Later
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Always Visible Minimized AI Agent */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <button
+          onClick={() => {
+            if (showAIAgent && !isAIAgentMinimized) {
+              handleMinimizeAIAgent()
+            } else {
+              setShowAIAgent(true)
+              setIsAIAgentMinimized(false)
+            }
+          }}
+          className="bg-[#2A2B32] border border-gray-600 rounded-full p-3 shadow-lg hover:bg-gray-700 transition-all group animate-pulse hover:animate-bounce"
+          title="AI Agent - Click to chat"
+        >
+          <Bot className="text-[#19c37d] group-hover:animate-spin" size={20} />
+        </button>
+      </div>
     </div>
   )
 }
