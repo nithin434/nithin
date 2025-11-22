@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://nithinjambula.dev/</loc>
+        <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/profile-image.jpeg</image:loc>
+            <image:caption>Nithin Jambula - Machine Learning Engineer Profile Photo</image:caption>
+            <image:title>Nithin Jambula</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/echo.jpg</image:loc>
+            <image:caption>EchoSight - Computer Vision Project by Nithin Jambula</image:caption>
+            <image:title>EchoSight Project</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/car.jpg</image:loc>
+            <image:caption>16fps - Autonomous Vehicle Detection System</image:caption>
+            <image:title>16fps Autonomous Vehicle Project</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/vikas.jpg</image:loc>
+            <image:caption>AI Research and Development Team</image:caption>
+            <image:title>AI Research Team</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/DAI.jpg</image:loc>
+            <image:caption>Deep Learning and AI Systems Architecture</image:caption>
+            <image:title>Deep Learning Architecture</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/vlan.jpg</image:loc>
+            <image:caption>Computer Vision and Neural Network Implementation</image:caption>
+            <image:title>Computer Vision Implementation</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/IBM.png</image:loc>
+            <image:caption>IBM Deep Learning Fundamentals Certificate</image:caption>
+            <image:title>IBM Deep Learning Certificate</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nithinjambula.dev/stanford.png</image:loc>
+            <image:caption>Stanford Machine Learning Specialization Certificate</image:caption>
+            <image:title>Stanford ML Certificate</image:title>
+        </image:image>
+    </url>
+</urlset>

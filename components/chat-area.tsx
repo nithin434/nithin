@@ -2,12 +2,11 @@
 
 import type React from "react"
 
-import { Send, Menu, FileText, Bot } from "lucide-react"
+import { Send, Menu, FileText, Bot, Terminal, Cpu, Code, Github, Linkedin, Mail, ExternalLink } from "lucide-react"
 import { Avatar } from "./avatar"
 import { CV_DATA } from "@/lib/cv-data"
 import { SuggestionCard } from "./suggestion-card"
 import { MessageContent } from "./message-content"
-import { Terminal, Cpu, Code } from "lucide-react"
 
 interface ChatAreaProps {
   input: string
@@ -53,7 +52,50 @@ export function ChatArea({
             <h2 className="text-2xl font-semibold mb-2 text-white">
               Nithin Jambula <span className="text-[#19c37d]">GPT</span>
             </h2>
-            <p className="text-gray-400 mb-8 max-w-md">
+            
+            {/* Animated Social Icons */}
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <a
+                href={CV_DATA.profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:bg-gray-700/50 group animate-pulse"
+                style={{animationDelay: '0s'}}
+              >
+                <Github size={16} className="text-gray-400 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href={CV_DATA.profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:bg-gray-700/50 group animate-pulse"
+                style={{animationDelay: '0.2s'}}
+              >
+                <Linkedin size={16} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
+              </a>
+              <button
+                onClick={() => {
+                  const subject = encodeURIComponent("Hello Nithin - Portfolio Inquiry")
+                  const body = encodeURIComponent("Hi Nithin,\n\nI visited your portfolio and would love to connect!\n\nBest regards")
+                  window.open(`mailto:${CV_DATA.profile.email}?subject=${subject}&body=${body}`, '_blank')
+                }}
+                className="p-1.5 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:bg-gray-700/50 group animate-pulse"
+                style={{animationDelay: '0.4s'}}
+              >
+                <Mail size={16} className="text-gray-400 group-hover:text-[#19c37d] transition-colors" />
+              </button>
+              <a
+                href={CV_DATA.profile.website}
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:bg-gray-700/50 group animate-pulse"
+                style={{animationDelay: '0.6s'}}
+              >
+                <ExternalLink size={16} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
+              </a>
+            </div>
+            
+            <p className="text-gray-400 mb-6 max-w-md">
               I'm Nithin's custom AI agent, built from his GitHub data (including private repos). This portfolio auto-updates from his latest commits. Yeah, I basically stalk his code for a living. 🤖
             </p>
 

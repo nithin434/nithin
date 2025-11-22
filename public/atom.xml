@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Nithin Jambula - Portfolio Updates</title>
+    <subtitle>Latest updates from Machine Learning Engineer Nithin Jambula</subtitle>
+    <link href="https://nithinjambula.dev/atom.xml" rel="self"/>
+    <link href="https://nithinjambula.dev/"/>
+    <id>https://nithinjambula.dev/</id>
+    <updated>2025-01-01T00:00:00Z</updated>
+    <author>
+        <name>Nithin Jambula</name>
+        <email>nithinjambula89@gmail.com</email>
+        <uri>https://nithinjambula.dev</uri>
+    </author>
+    <rights>© 2025 Nithin Jambula. All rights reserved.</rights>
+    <category term="Machine Learning"/>
+    <category term="Computer Vision"/>
+    <category term="Artificial Intelligence"/>
+    <category term="Deep Learning"/>
+    
+    <entry>
+        <title>Portfolio Launch</title>
+        <id>https://nithinjambula.dev/updates/portfolio-launch</id>
+        <updated>2025-01-01T00:00:00Z</updated>
+        <summary>Launched comprehensive portfolio showcasing ML engineering projects and AI expertise</summary>
+        <content type="html">
+            <![CDATA[
+            <p>Welcome to my professional portfolio! This site showcases my journey as a Machine Learning Engineer specializing in Computer Vision, Deep Learning, and AI Systems.</p>
+            
+            <p>Featured projects include:</p>
+            <ul>
+                <li>EchoSight - Advanced computer vision system</li>
+                <li>16fps - Real-time object detection platform</li>
+                <li>Autonomous Vehicle AI - Self-driving car detection systems</li>
+                <li>AI Agents - Intelligent automation systems</li>
+            </ul>
+            
+            <p>Built with cutting-edge technologies including PyTorch, TensorFlow, Next.js, and modern AI architectures.</p>
+            ]]>
+        </content>
+        <author>
+            <name>Nithin Jambula</name>
+        </author>
+        <category term="Portfolio"/>
+        <category term="Launch"/>
+    </entry>
+    
+    <entry>
+        <title>Latest Projects Update</title>
+        <id>https://nithinjambula.dev/updates/projects-update</id>
+        <updated>2025-01-01T00:00:00Z</updated>
+        <summary>Recent developments in computer vision and AI agent projects</summary>
+        <content type="html">
+            <![CDATA[
+            <p>Exciting developments in my current projects:</p>
+            
+            <h3>Computer Vision Advances</h3>
+            <p>Enhanced object detection accuracy and real-time performance in autonomous vehicle systems.</p>
+            
+            <h3>AI Agent Development</h3>
+            <p>Breakthrough in neuro-symbolic AI integration for more intelligent and explainable AI systems.</p>
+            
+            <h3>Research Publications</h3>
+            <p>Preparing research papers on novel computer vision architectures and their applications in autonomous systems.</p>
+            ]]>
+        </content>
+        <author>
+            <name>Nithin Jambula</name>
+        </author>
+        <category term="Projects"/>
+        <category term="Research"/>
+    </entry>
+</feed>

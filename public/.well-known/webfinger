@@ -1,0 +1,68 @@
+{
+  "subject": "https://nithinjambula.dev",
+  "aliases": [
+    "https://www.nithinjambula.dev",
+    "acct:nithin434@github.com",
+    "acct:nithinjambula89@gmail.com"
+  ],
+  "properties": {
+    "https://schema.org/name": "Nithin Jambula",
+    "https://schema.org/jobTitle": "Machine Learning Engineer",
+    "https://schema.org/email": "nithinjambula89@gmail.com",
+    "https://schema.org/telephone": "+919347632259",
+    "https://schema.org/address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Andhra Pradesh",
+      "addressCountry": "IN"
+    },
+    "https://schema.org/alumniOf": "VIT-AP University",
+    "https://schema.org/knowsAbout": [
+      "Machine Learning",
+      "Deep Learning", 
+      "Computer Vision",
+      "Artificial Intelligence",
+      "PyTorch",
+      "TensorFlow",
+      "Python"
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/jrd+json",
+      "href": "https://nithinjambula.dev/.well-known/webfinger?resource=https://nithinjambula.dev"
+    },
+    {
+      "rel": "alternate",
+      "type": "text/html", 
+      "href": "https://nithinjambula.dev"
+    },
+    {
+      "rel": "avatar",
+      "type": "image/jpeg",
+      "href": "https://nithinjambula.dev/profile-image.jpeg"
+    },
+    {
+      "rel": "me",
+      "href": "https://github.com/nithin434"
+    },
+    {
+      "rel": "me", 
+      "href": "https://linkedin.com/in/nithin-jambula"
+    },
+    {
+      "rel": "me",
+      "href": "https://twitter.com/nithin434"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://nithinjambula.dev"
+    },
+    {
+      "rel": "http://schemas.google.com/g/2010#updates-from",
+      "type": "application/atom+xml",
+      "href": "https://nithinjambula.dev/atom.xml"
+    }
+  ]
+}
