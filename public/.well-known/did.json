@@ -1,0 +1,30 @@
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:web:nithinjambula.dev",
+  "verificationMethod": [
+    {
+      "id": "did:web:nithinjambula.dev#key-1",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:nithinjambula.dev",
+      "publicKeyMultibase": "zH3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
+    }
+  ],
+  "authentication": [
+    "did:web:nithinjambula.dev#key-1"
+  ],
+  "assertionMethod": [
+    "did:web:nithinjambula.dev#key-1"
+  ],
+  "service": [
+    {
+      "id": "did:web:nithinjambula.dev#portfolio",
+      "type": "Portfolio",
+      "serviceEndpoint": "https://nithinjambula.dev"
+    },
+    {
+      "id": "did:web:nithinjambula.dev#contact",
+      "type": "ContactService",
+      "serviceEndpoint": "mailto:nithinjambula89@gmail.com"
+    }
+  ]
+}
