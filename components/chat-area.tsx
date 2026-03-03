@@ -96,7 +96,7 @@ export function ChatArea({
             </div>
             
             <p className="text-gray-400 mb-6 max-w-md">
-              I'm Nithin's custom AI agent, built from his GitHub data (including private repos). This portfolio auto-updates from his latest commits. Yeah, I basically stalk his code for a living. 🤖
+              I'm Nithin's custom AI agent. Built from his GitHub repos, trained on 1000+ commits, and basically stalk his code for a living. Ask me anything about AI, robotics, or why deep learning is just glorified pattern matching. 🤖
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">

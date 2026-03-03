@@ -3,6 +3,7 @@
 import { Award, Sparkles, Mail, Linkedin, Github, ExternalLink, FileText, Eye, Bot, X } from "lucide-react"
 import { CV_DATA } from "@/lib/cv-data"
 import { FollowUpChip } from "./follow-up-chip"
+import { ProjectCard } from "./project-card"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 
@@ -57,30 +58,60 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
 
       {msg.type === "experience" && (
         <div className="grid gap-4 mt-4">
-          {CV_DATA.experience.map((exp, idx) => (
+          {(msg.data?.experience || CV_DATA.experience).map((exp: any, idx: number) => (
             <div
               key={idx}
-              className="group bg-gray-800/40 border border-gray-700/60 p-4 rounded-xl hover:bg-gray-800 hover:border-[#19c37d]/50 transition-all"
+              className="group bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 hover:border-slate-600 transition-all rounded-xl overflow-hidden"
             >
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                <div>
-                  <h3 className="font-bold text-[#19c37d] text-lg">{exp.role}</h3>
-                  <p className="text-sm text-white font-medium">{exp.company}</p>
-                </div>
-                <span className="text-xs text-gray-400 bg-gray-900/80 px-2 py-1 rounded-md whitespace-nowrap border border-gray-800 font-mono">
-                  {exp.duration}
-                </span>
-              </div>
-              <p className="text-sm text-gray-300 mb-3 leading-relaxed">{exp.description}</p>
-              <div className="flex gap-2 flex-wrap">
-                {exp.tech.map((t, i) => (
-                  <span
-                    key={i}
-                    className="text-xs border border-gray-600 text-gray-400 px-2 py-0.5 rounded-full bg-gray-900/30"
-                  >
-                    {t}
+              <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500" />
+              <div className="p-5 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                  <div>
+                    <h3 className="font-bold text-[#19c37d] text-lg">{exp.role}</h3>
+                    <p className="text-sm text-white font-medium">{exp.company}</p>
+                    <p className="text-xs text-slate-400 mt-0.5">{exp.location}</p>
+                  </div>
+                  <span className="text-xs text-gray-400 bg-slate-900/80 px-3 py-1 rounded-md whitespace-nowrap border border-slate-700 font-mono">
+                    {exp.duration}
                   </span>
-                ))}
+                </div>
+                <p className="text-sm text-gray-300 leading-relaxed">{exp.description}</p>
+                
+                {exp.detailedWork && (
+                  <div className="space-y-2 pt-3 border-t border-slate-700">
+                    <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Key Contributions</p>
+                    <ul className="space-y-1.5">
+                      {exp.detailedWork.map((work: string, i: number) => (
+                        <li key={i} className="flex gap-2 text-xs text-slate-300">
+                          <span className="text-slate-500 font-bold mt-0.5">▸</span>
+                          <span>{work}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {exp.metrics && (
+                  <div className="grid grid-cols-2 gap-2 pt-3 border-t border-slate-700">
+                    {Object.entries(exp.metrics).map(([key, value]: [string, unknown]) => (
+                      <div key={key} className="bg-slate-800/50 border border-slate-700 rounded p-2">
+                        <p className="text-xs text-slate-400">{key}</p>
+                        <p className="text-sm font-bold text-slate-100">{value as string}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex gap-1.5 flex-wrap pt-3 border-t border-slate-700">
+                  {exp.tech?.map((t: string, i: number) => (
+                    <span
+                      key={i}
+                      className="text-xs bg-slate-800 text-slate-200 hover:bg-slate-700 px-2.5 py-1 rounded-lg transition-all"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -88,42 +119,37 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
       )}
 
       {msg.type === "projects" && (
-        <div className="grid md:grid-cols-2 gap-4 mt-4">
-          {CV_DATA.projects.map((proj, idx) => (
-            <div
+        <div className="grid md:grid-cols-1 gap-4 mt-4 w-full">
+          {(msg.data?.projects || CV_DATA.projects).map((proj: any, idx: number) => (
+            <ProjectCard
               key={idx}
-              className="bg-gray-800/40 border border-gray-700/60 p-4 rounded-xl hover:border-[#19c37d]/50 hover:bg-gray-800 transition-all flex flex-col h-full"
-            >
-              <div className="mb-3">
-                <h3 className="font-bold text-gray-100 text-lg flex items-center justify-between">
-                  {proj.title}
-                  {proj.award && <Award size={16} className="text-yellow-500" />}
-                </h3>
-                <p className="text-xs text-[#19c37d] mt-1 font-mono">{proj.tech}</p>
-              </div>
-              <p className="text-sm text-gray-400 flex-grow mb-3 leading-relaxed">{proj.description}</p>
-              {proj.award && (
-                <div className="mt-auto pt-3 border-t border-gray-700/50 text-xs text-yellow-500/90 flex items-center gap-2">
-                  <Sparkles size={12} /> {proj.award}
-                </div>
-              )}
-            </div>
+              title={proj.title}
+              subtitle={proj.subtitle}
+              description={proj.description}
+              tech={proj.tech}
+              tags={proj.tags}
+              image={proj.image}
+              detailedFeatures={proj.detailedFeatures}
+              keyMetrics={proj.keyMetrics}
+              award={proj.award}
+              impact={proj.impact}
+            />
           ))}
         </div>
       )}
 
       {msg.type === "skills" && (
         <div className="space-y-6 mt-4">
-          {Object.entries(CV_DATA.skills).map(([category, items], idx) => (
+          {Object.entries(msg.data?.skills || CV_DATA.skills).map(([category, items], idx) => (
             <div key={idx}>
-              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
-                {category.replace(/_/g, " ")}
+              <h4 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-3 ml-1 flex items-center gap-2">
+                <span className="text-lg">→</span> {category.replace(/_/g, " ")}
               </h4>
               <div className="flex flex-wrap gap-2">
                 {(items as string[]).map((skill, i) => (
                   <span
                     key={i}
-                    className="bg-gray-900/50 hover:bg-gray-800 text-gray-300 text-sm px-3 py-1.5 rounded-lg border border-gray-700/50 transition-colors cursor-default"
+                    className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-200 text-sm px-3 py-1.5 rounded-lg border border-slate-700/50 transition-all cursor-default font-medium"
                   >
                     {skill}
                   </span>
@@ -137,65 +163,78 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
       {msg.type === "contact" && (
         <div className="grid sm:grid-cols-2 gap-3 mt-4">
           <a
-            href={`mailto:${CV_DATA.profile.email}?subject=Hello Nithin - Happy to Connect!&body=Hi Nithin,%0A%0AI came across your portfolio and would love to connect with you.%0A%0ABest regards`}
+            href={`mailto:${msg.data?.email || CV_DATA.profile.email}?subject=Hello Nithin - Happy to Connect!&body=Hi Nithin,%0A%0AI came across your portfolio and would love to connect with you.%0A%0ABest regards`}
             target="_blank"
-            className="flex items-center gap-3 p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:bg-gray-800 hover:border-gray-500 transition-all group"
+            className="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl hover:border-cyan-500/50 hover:from-slate-800 transition-all group"
           >
-            <div className="p-2 bg-gray-700 rounded-lg group-hover:bg-gray-600 text-[#19c37d] transition-colors">
+            <div className="p-2 bg-slate-700 rounded-lg group-hover:bg-cyan-900/30 text-cyan-400 transition-colors">
               <Mail size={20} />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs text-gray-500">Email</span>
-              <span className="text-sm text-gray-200">{CV_DATA.profile.email}</span>
+              <span className="text-xs text-slate-400">Email</span>
+              <span className="text-sm text-slate-200">{msg.data?.email || CV_DATA.profile.email}</span>
             </div>
           </a>
           <a
-            href={CV_DATA.profile.linkedin}
+            href={msg.data?.linkedin || CV_DATA.profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3 p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:bg-gray-800 hover:border-blue-500/50 transition-all group"
+            className="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl hover:border-blue-500/50 hover:from-slate-800 transition-all group"
           >
-            <div className="p-2 bg-gray-700 rounded-lg group-hover:bg-blue-900/30 text-blue-400 transition-colors">
+            <div className="p-2 bg-slate-700 rounded-lg group-hover:bg-blue-900/30 text-blue-400 transition-colors">
               <Linkedin size={20} />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs text-gray-500">Social</span>
-              <span className="text-sm text-gray-200">LinkedIn Profile</span>
+              <span className="text-xs text-slate-400">LinkedIn</span>
+              <span className="text-sm text-slate-200">Connect</span>
             </div>
-            <ExternalLink size={14} className="ml-auto text-gray-600 group-hover:text-gray-400" />
+            <ExternalLink size={14} className="ml-auto text-slate-600 group-hover:text-slate-400" />
           </a>
           <a
-            href={CV_DATA.profile.github}
+            href={msg.data?.github || CV_DATA.profile.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3 p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:bg-gray-800 hover:border-purple-500/50 transition-all group sm:col-span-2"
+            className="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl hover:border-purple-500/50 hover:from-slate-800 transition-all group sm:col-span-2"
           >
-            <div className="p-2 bg-gray-700 rounded-lg group-hover:bg-purple-900/30 text-purple-400 transition-colors">
+            <div className="p-2 bg-slate-700 rounded-lg group-hover:bg-purple-900/30 text-purple-400 transition-colors">
               <Github size={20} />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs text-gray-500">Code</span>
-              <span className="text-sm text-gray-200">GitHub Profile</span>
+              <span className="text-xs text-slate-400">GitHub</span>
+              <span className="text-sm text-slate-200">Check out the code</span>
             </div>
-            <ExternalLink size={14} className="ml-auto text-gray-600 group-hover:text-gray-400" />
+            <ExternalLink size={14} className="ml-auto text-slate-600 group-hover:text-slate-400" />
+          </a>
+          <a
+            href={`tel:${msg.data?.phone || CV_DATA.profile.phone}`}
+            className="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl hover:border-green-500/50 hover:from-slate-800 transition-all group sm:col-span-1"
+          >
+            <div className="p-2 bg-slate-700 rounded-lg group-hover:bg-green-900/30 text-green-400 transition-colors">
+              <FileText size={20} />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xs text-slate-400">Phone</span>
+              <span className="text-sm text-slate-200">{msg.data?.phone || CV_DATA.profile.phone}</span>
+            </div>
           </a>
         </div>
       )}
 
       {msg.type === "education" && (
         <div className="space-y-3 mt-4">
-          {CV_DATA.education.map((edu, idx) => (
+          {(msg.data?.education || CV_DATA.education).map((edu: any, idx: number) => (
             <div
               key={idx}
-              className="bg-gray-800/40 border border-gray-700 p-4 rounded-xl flex justify-between items-start gap-4"
+              className="bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-700 hover:border-slate-600 transition-all p-4 rounded-xl flex justify-between items-start gap-4"
             >
-              <div>
-                <h3 className="font-bold text-[#19c37d]">{edu.degree}</h3>
-                <p className="text-gray-300 text-sm">{edu.school}</p>
+              <div className="flex-1">
+                <h3 className="font-bold text-cyan-400">{edu.degree}</h3>
+                <p className="text-slate-300 text-sm">{edu.school}</p>
+                <p className="text-xs text-slate-500 mt-1">{edu.location}</p>
               </div>
-              <div className="text-right">
-                <div className="text-sm font-mono text-gray-400">{edu.year}</div>
-                <div className="text-xs text-gray-500">Score: {edu.score}</div>
+              <div className="text-right whitespace-nowrap">
+                <div className="text-sm font-mono text-slate-400">{edu.year}</div>
+                <div className="text-xs text-slate-500">Score: {edu.score}</div>
               </div>
             </div>
           ))}
@@ -204,26 +243,27 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
 
       {msg.type === "certifications" && (
         <div className="space-y-4 mt-4">
-          <div className="bg-gray-800/40 border border-gray-700 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-400 uppercase mb-3 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl p-5 space-y-3">
+            <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-2">
               <Award size={16} /> Certifications
             </h3>
             <ul className="space-y-2">
-              {CV_DATA.certifications.map((cert, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
-                  <span className="text-[#19c37d] mt-1">•</span> {cert}
+              {(msg.data?.certifications || CV_DATA.certifications).map((cert: any, idx: number) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-slate-300">
+                  <span className="text-cyan-400 mt-1 font-bold">✓</span> 
+                  <span>{typeof cert === 'string' ? cert : cert.name}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-gray-800/40 border border-gray-700 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-400 uppercase mb-3 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-xl p-5 space-y-3">
+            <h3 className="text-sm font-bold text-yellow-400 uppercase tracking-wider flex items-center gap-2">
               <Sparkles size={16} /> Achievements & Roles
             </h3>
             <ul className="space-y-2">
-              {CV_DATA.achievements.map((ach, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
-                  <span className="text-yellow-500 mt-1">★</span> {ach}
+              {(msg.data?.achievements || CV_DATA.achievements).map((ach: string, idx: number) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-slate-300">
+                  <span className="text-yellow-400 mt-1 text-lg">★</span> {ach}
                 </li>
               ))}
             </ul>

@@ -3,13 +3,16 @@
 import { useState, useEffect, useRef } from "react"
 import { Sidebar } from "@/components/sidebar"
 import { ChatArea } from "@/components/chat-area"
+import { ProjectCard } from "@/components/project-card"
 import { Bot, X, Minimize2, Maximize2 } from "lucide-react"
+import { CV_DATA } from "@/lib/cv-data"
 
 interface Message {
   role: "user" | "assistant"
   content: string
   type?: string
   suggestions?: string[]
+  data?: Record<string, unknown>
 }
 
 export default function Portfolio() {
@@ -78,12 +81,14 @@ export default function Portfolio() {
       lowerQuery.includes("job") ||
       lowerQuery.includes("intern") ||
       lowerQuery.includes("air centre") ||
-      lowerQuery.includes("vulcan")
+      lowerQuery.includes("vulcan") ||
+      lowerQuery.includes("ananta")
     ) {
       return {
         type: "experience",
-        text: "I'm a Machine Learning Engineer with hands-on research and industry experience in neuro-symbolic AI and autonomous robotics.",
+        text: "I've been building AI systems, teaching robots to drive themselves, and essentially making hackers' lives harder through neuro-symbolic AI. Here's the journey:",
         suggestions: ["Tell me about EchoSight", "What is 16fps?", "Show my skills"],
+        data: { experience: CV_DATA.experience },
       }
     }
 
@@ -100,8 +105,9 @@ export default function Portfolio() {
     ) {
       return {
         type: "projects",
-        text: "I've engineered advanced systems ranging from autonomous agents to computer vision solutions. Here are my key projects:",
+        text: "I've engineered some pretty cool systems ranging from AI agents that generate videos to wearables that give people back their sight. Here's the full arsenal:",
         suggestions: ["Tell me about EchoSight", "Explain 16fps project", "View all experience"],
+        data: { projects: CV_DATA.projects },
       }
     }
 
@@ -137,8 +143,9 @@ export default function Portfolio() {
     ) {
       return {
         type: "skills",
-        text: "I have a robust technical stack specializing in LLMs, Computer Vision, Agentic AI, and Embedded Systems:",
+        text: "My tech stack is basically what you get when you merge a ML researcher with a robotics engineer. I can make neural networks do backflips and robots navigate like they've had 10 cups of coffee. Here's the arsenal:",
         suggestions: ["Show certifications", "View education", "Contact info"],
+        data: { skills: CV_DATA.skills },
       }
     }
 
@@ -152,8 +159,15 @@ export default function Portfolio() {
     ) {
       return {
         type: "contact",
-        text: "I'm available for opportunities and collaborations. Here's how you can reach me:",
+        text: "Yeah, I'm available for opportunities and collaborations. Whether you want to build AI, robots, or just chat about why deep learning is basically modern alchemy:",
         suggestions: ["View projects", "Download CV", "My skills"],
+        data: {
+          email: CV_DATA.profile.email,
+          phone: CV_DATA.profile.phone,
+          linkedin: CV_DATA.profile.linkedin,
+          github: CV_DATA.profile.github,
+          website: CV_DATA.profile.website,
+        },
       }
     }
 
@@ -167,8 +181,9 @@ export default function Portfolio() {
     ) {
       return {
         type: "education",
-        text: "Here's my academic background:",
+        text: "Went to the best tech university in India and actually paid attention in the ML classes (unlike most students). Here's the academic journey:",
         suggestions: ["Show certifications", "View experience", "Contact me"],
+        data: { education: CV_DATA.education },
       }
     }
 
@@ -181,8 +196,9 @@ export default function Portfolio() {
     ) {
       return {
         type: "certifications",
-        text: "I've been recognized for innovation and technical expertise across AI, robotics, and security:",
+        text: "Got badges, awards, and papers from major institutions because, you know, I actually proved what I built works. Here's the proof:",
         suggestions: ["View projects", "Show my skills", "Contact info"],
+        data: { certifications: CV_DATA.detailedCertifications, achievements: CV_DATA.achievements },
       }
     }
 
