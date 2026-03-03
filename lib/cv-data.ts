@@ -95,6 +95,8 @@ export const CV_DATA = {
       tech: "YOLOv8, Roboflow, Raspberry Pi, GCP, OpenCV, TTS",
       subtitle: "Patent Pending | AI-Powered Accessibility",
       image: "/echo.jpg",
+      imageAlt: "EchoSight Wearable Assistive Navigation Glasses by Nithin Jambula - AI-powered accessibility technology for visually impaired",
+      imageKeywords: ["EchoSight", "Nithin Jambula", "wearable tech", "accessibility", "computer vision", "object detection", "YOLOv8", "assistive technology"],
       tags: ["Computer Vision", "Accessibility Tech", "IoT", "Real-time ML"],
       description:
         "Wearable vision-based system that basically gave sight back to people through a Raspberry Pi and some neural networks. 🎯 Fine-tuned YOLOv8 with 50+ custom object classes running at 45+ FPS (faster than you can blink). Integrated spatial awareness, distance estimation, and contextual voice alerts that actually make sense. Won Vikas 2024 Innovation Challenge – because apparently, accessibility tech > scrolling through TikTok.",
@@ -120,6 +122,8 @@ export const CV_DATA = {
       tech: "Python, LangChain, Stable Video Diffusion, AnimateDiff",
       subtitle: "Commercial SaaS | Video AI",
       image: "/echo.jpg",
+      imageAlt: "16fps AI Video Generation Agent by Nithin Jambula - Multi-agent system for generating consistent videos from text prompts",
+      imageKeywords: ["16fps", "Nithin Jambula", "video generation", "AI agent", "text to video", "stable diffusion", "generative AI", "SaaS platform"],
       tags: ["Generative AI", "Multi-Agent Systems", "Video Synthesis", "SaaS"],
       description:
         "Built an agentic AI that generates coherent 1+ minute videos from pure text prompts. Basically ChatGPT but for video – except it actually maintains character consistency and doesn't forget what happened 2 seconds ago (unlike humans 😅). Self-correcting pipeline with memory, tool-use, and reflection. Generated so much hype that we sold commercial rights to a media production company. Zero-downtime cloud infrastructure because we don't do crashes.",
@@ -145,6 +149,8 @@ export const CV_DATA = {
       tech: "Gemini API, Google Cloud, Python, Node.js, Adversarial Testing",
       subtitle: "Agentic Reasoning | WhatsApp Integration",
       image: "/echo.jpg",
+      imageAlt: "WOAT WhatsApp Conversational AI Agent by Nithin Jambula - Context-aware LLM chatbot with tone adaptation",
+      imageKeywords: ["WOAT", "Nithin Jambula", "WhatsApp bot", "conversational AI", "LLM agent", "Gemini API", "chatbot", "context awareness"],
       tags: ["LLMs", "Conversational AI", "Context Understanding", "Adversarial Testing"],
       description:
         "WhatsApp bot that learned to respond like you (the creepy way your friends text, your inside jokes, everything). Built context memory that tracks relationships, detects emotional tone, and adapts responses to match your vibe. Smart enough to know when you're being sarcastic and when you're actually angry. QR-based secure login and fallback modes because Murphy's Law is always watching.",
@@ -171,6 +177,8 @@ export const CV_DATA = {
       tech: "CNN, GAN, OpenCV, Python, Adversarial Testing",
       subtitle: "Research | Security",
       image: "/echo.jpg",
+      imageAlt: "DeepShield CNN Deepfake Detection Model by Nithin Jambula - Face-swap detection for video security",
+      imageKeywords: ["DeepShield", "Nithin Jambula", "deepfake detection", "face swap detection", "CNN", "GAN", "video forensics", "security", "adversarial testing"],
       tags: ["Deep Learning", "Security", "Video Forensics", "Adversarial ML"],
       description:
         "CNN-based deepfake detector that catches face-swap videos before they go viral and ruin someone's life. Built synthetic video generation pipeline for data augmentation (creating fake videos to catch fake videos – meta, right?). 22% accuracy improvement over baselines. Stress-tested with adversarial attacks because hackers don't play nice. Published at iSAI 2025 conference because peer review said 'yeah, this is legit.'",
@@ -196,6 +204,8 @@ export const CV_DATA = {
       tech: "Python, OpenCV, MediaPipe, SpeechRecognition, Bluetooth",
       subtitle: "Accessibility | Computer Vision",
       image: "/echo.jpg",
+      imageAlt: "ScreenAutomate Gesture Voice Control System by Nithin Jambula - Hand gesture and voice recognition interface",
+      imageKeywords: ["ScreenAutomate", "Nithin Jambula", "gesture recognition", "voice control", "MediaPipe", "accessibility", "HCI", "hands-free control"],
       tags: ["Gesture Recognition", "Voice Control", "Accessibility", "HCI"],
       description:
         "Hybrid system that makes your keyboard and mouse cry because you're literally controlling your screen with hand waves and voice commands. Bluetooth-aware, hands-free interaction designed for accessibility and lazy smart home enthusiasts. Because sometimes typing is just too much effort.",

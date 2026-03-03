@@ -1,9 +1,10 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
+import { ChevronDown, ChevronUp, ExternalLink, ImageIcon } from "lucide-react"
 
 interface ProjectCardProps {
   title: string
@@ -11,6 +12,8 @@ interface ProjectCardProps {
   description: string
   tech: string
   image?: string
+  imageAlt?: string
+  imageKeywords?: string[]
   tags: string[]
   detailedFeatures?: string[]
   keyMetrics?: Record<string, string>
@@ -24,6 +27,8 @@ export function ProjectCard({
   description,
   tech,
   image,
+  imageAlt,
+  imageKeywords,
   tags,
   detailedFeatures,
   keyMetrics,
@@ -43,10 +48,62 @@ export function ProjectCard({
 
   const { accent, badge } = getColorScheme(title)
 
+  // Structured Data for Google
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: title,
+    description: description,
+    image: image ? `https://nithinjambula.dev${image}` : undefined,
+    uploadDate: new Date().toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Nithin Jambula",
+      url: "https://nithinjambula.dev",
+      sameAs: [
+        "https://github.com/nithin434",
+        "https://linkedin.com/in/nithin-jambula",
+      ]
+    },
+    keywords: [...(imageKeywords || []), ...tags].join(", "),
+  }
+
   return (
-    <Card className="bg-gradient-to-br from-slate-900 to-slate-950 border-slate-700 hover:border-slate-600 transition-all duration-300 overflow-hidden group">
-      {/* Header with gradient accent */}
-      <div className={`h-1 bg-gradient-to-r ${accent}`} />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <Card className="bg-gradient-to-br from-slate-900 to-slate-950 border-slate-700 hover:border-slate-600 transition-all duration-300 overflow-hidden group">
+        {/* Project Image with SEO */}
+        {image && (
+          <div className="relative w-full h-64 bg-slate-800 overflow-hidden group-hover:shadow-lg transition-shadow">
+            <Image
+              src={image}
+              alt={imageAlt || title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={false}
+              quality={80}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+            {imageKeywords && (
+              <meta
+                name="keywords"
+                content={`${title}, Nithin Jambula, ${imageKeywords.join(", ")}`}
+              />
+            )}
+          </div>
+        )}
+        {!image && (
+          <div className="w-full h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+            <ImageIcon className="text-slate-600" size={40} />
+          </div>
+        )}
+        
+        {/* Header with gradient accent */}
+        <div className={`h-1 bg-gradient-to-r ${accent}`} />
 
       <div className="p-6 space-y-4">
         {/* Title Section */}
@@ -156,5 +213,6 @@ export function ProjectCard({
         )}
       </div>
     </Card>
+    </>
   )
 }

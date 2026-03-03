@@ -129,6 +129,8 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
               tech={proj.tech}
               tags={proj.tags}
               image={proj.image}
+              imageAlt={proj.imageAlt}
+              imageKeywords={proj.imageKeywords}
               detailedFeatures={proj.detailedFeatures}
               keyMetrics={proj.keyMetrics}
               award={proj.award}

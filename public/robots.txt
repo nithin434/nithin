@@ -64,9 +64,25 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 
-# Sitemap location
+# Sitemap locations - Image and Page Sitemaps
 Sitemap: https://nithinjambula.dev/sitemap.xml
-Sitemap: https://nithinjambula.dev/sitemap-0.xml
+Sitemap: https://nithinjambula.dev/sitemap-index.xml
+Sitemap: https://nithinjambula.dev/sitemap-pages.xml
+Sitemap: https://nithinjambula.dev/sitemap-projects.xml
+Sitemap: https://nithinjambula.dev/sitemap-images.xml
+
+# Image crawler permissions
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: bingbot-image
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
 
 # Crawl delay (in seconds) for aggressive bots
 Crawl-delay: 1
