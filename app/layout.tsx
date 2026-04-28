@@ -602,6 +602,13 @@ export default function RootLayout({
         <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
         <link rel="help" href="https://nithinjambula.dev/contact" />
         <link rel="bookmark" href="https://nithinjambula.dev" title="Nithin Jambula Portfolio" />
+        
+        {/* Analytics Script */}
+        <Script 
+          defer 
+          src="https://see.16fps.in/script.js" 
+          data-website-id="750811dd-e124-4286-8c0a-5effa7a89c8f"
+        />
       </head>
       <body className={`font-sans antialiased`}>
         {children}
