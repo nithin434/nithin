@@ -604,10 +604,10 @@ export default function RootLayout({
         <link rel="bookmark" href="https://nithinjambula.dev" title="Nithin Jambula Portfolio" />
         
         {/* Analytics Script */}
-        <Script 
-          defer 
-          src="https://see.16fps.in/script.js" 
-          data-website-id="750811dd-e124-4286-8c0a-5effa7a89c8f"
+        <script
+          defer
+          src="http://localhost:3001/script.js"
+          data-website-id="7303435b-1e8d-4ac4-80ea-5fce2a271927"
         />
       </head>
       <body className={`font-sans antialiased`}>
