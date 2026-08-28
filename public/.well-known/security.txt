@@ -3,11 +3,11 @@ permalink: /.well-known/security.txt
 ---
 
 Contact: mailto:nithinjambula89@gmail.com
-Contact: https://nithinjambula.dev/contact
+Contact: https://nithin434.github.io/nithin/contact
 Expires: 2025-12-31T23:59:59.000Z
-Encryption: https://nithinjambula.dev/.well-known/pgp-key.txt
-Acknowledgments: https://nithinjambula.dev/security-acknowledgments
+Encryption: https://nithin434.github.io/nithin/.well-known/pgp-key.txt
+Acknowledgments: https://nithin434.github.io/nithin/security-acknowledgments
 Preferred-Languages: en, hi
-Canonical: https://nithinjambula.dev/.well-known/security.txt
-Policy: https://nithinjambula.dev/security-policy
-Hiring: https://nithinjambula.dev/careers
+Canonical: https://nithin434.github.io/nithin/.well-known/security.txt
+Policy: https://nithin434.github.io/nithin/security-policy
+Hiring: https://nithin434.github.io/nithin/careers

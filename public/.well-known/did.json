@@ -1,28 +1,28 @@
 {
   "@context": "https://www.w3.org/ns/did/v1",
-  "id": "did:web:nithinjambula.dev",
+  "id": "did:web:nithin434.github.io/nithin",
   "verificationMethod": [
     {
-      "id": "did:web:nithinjambula.dev#key-1",
+      "id": "did:web:nithin434.github.io/nithin#key-1",
       "type": "Ed25519VerificationKey2020",
-      "controller": "did:web:nithinjambula.dev",
+      "controller": "did:web:nithin434.github.io/nithin",
       "publicKeyMultibase": "zH3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
     }
   ],
   "authentication": [
-    "did:web:nithinjambula.dev#key-1"
+    "did:web:nithin434.github.io/nithin#key-1"
   ],
   "assertionMethod": [
-    "did:web:nithinjambula.dev#key-1"
+    "did:web:nithin434.github.io/nithin#key-1"
   ],
   "service": [
     {
-      "id": "did:web:nithinjambula.dev#portfolio",
+      "id": "did:web:nithin434.github.io/nithin#portfolio",
       "type": "Portfolio",
-      "serviceEndpoint": "https://nithinjambula.dev"
+      "serviceEndpoint": "https://nithin434.github.io/nithin"
     },
     {
-      "id": "did:web:nithinjambula.dev#contact",
+      "id": "did:web:nithin434.github.io/nithin#contact",
       "type": "ContactService",
       "serviceEndpoint": "mailto:nithinjambula89@gmail.com"
     }

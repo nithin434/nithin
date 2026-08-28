@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site"
 interface Certification {
   name: string
   provider: string
@@ -23,8 +24,8 @@ export const CV_DATA = {
     email: "nithinjambula89@gmail.com",
     linkedin: "https://linkedin.com/in/nithin-jambula",
     github: "https://github.com/nithin434",
-    website: "https://nithinjambula.dev",
-    cv_link: "https://nithinjambula.dev/CV.pdf",
+    website: SITE_URL,
+    cv_link: `${SITE_URL}/CV.pdf`,
   },
   experience: [
     {

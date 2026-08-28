@@ -113,10 +113,10 @@ Disallow: /.well-known/
 Allow: /.well-known/security.txt
 
 # Sitemaps
-Sitemap: https://nithinjambula.dev/sitemap.xml
-Sitemap: https://nithinjambula.dev/sitemap-index.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap-index.xml
 
 # Additional information
-# Website: https://nithinjambula.dev
+# Website: https://nithin434.github.io/nithin
 # Contact: nithinjambula89@gmail.com
 # Last updated: 2025-01-01

@@ -6,6 +6,7 @@ import { FollowUpChip } from "./follow-up-chip"
 import { ProjectCard } from "./project-card"
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { BASE_PATH } from "@/lib/site"
 
 interface Message {
   type: string
@@ -277,7 +278,7 @@ export function MessageContent({ msg, onSendMessage }: MessageContentProps) {
         <div className="mt-4">
           <button
             onClick={() => {
-              window.open('/CV.pdf', '_blank')
+              window.open(`${BASE_PATH}/CV.pdf`, '_blank')
               // Simulate terminal output by sending a message
               setTimeout(() => {
                 onSendMessage("CV opened successfully")

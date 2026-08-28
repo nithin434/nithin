@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ChevronDown, ChevronUp, ExternalLink, ImageIcon } from "lucide-react"
+import { SITE_URL } from "@/lib/site"
 
 interface ProjectCardProps {
   title: string
@@ -54,12 +55,12 @@ export function ProjectCard({
     "@type": "VideoObject",
     name: title,
     description: description,
-    image: image ? `https://nithinjambula.dev${image}` : undefined,
+    image: image ? `${SITE_URL}${image}` : undefined,
     uploadDate: new Date().toISOString(),
     author: {
       "@type": "Person",
       name: "Nithin Jambula",
-      url: "https://nithinjambula.dev",
+      url: SITE_URL,
       sameAs: [
         "https://github.com/nithin434",
         "https://linkedin.com/in/nithin-jambula",

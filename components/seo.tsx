@@ -1,6 +1,7 @@
 "use client"
 
 import Script from "next/script"
+import { SITE_URL } from "@/lib/site"
 
 interface ImageMetadata {
   title: string
@@ -34,7 +35,7 @@ export function ImageSEO({ images }: { images: ImageMetadata[] }) {
     isPartOf: {
       "@type": "WebPage",
       name: image.projectName,
-      url: `https://nithinjambula.dev/${image.projectName.toLowerCase().replace(/\s+/g, "-")}`,
+      url: `${SITE_URL}/${image.projectName.toLowerCase().replace(/\s+/g, "-")}`,
     },
     creator: {
       "@type": "Person",
@@ -72,8 +73,8 @@ export function OrganizationSEO() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Nithin Jambula",
-    url: "https://nithinjambula.dev",
-    image: "https://nithinjambula.dev/profile-image.jpeg",
+    url: SITE_URL,
+    image: `${SITE_URL}/profile-image.jpeg`,
     sameAs: [
       "https://github.com/nithin434",
       "https://linkedin.com/in/nithin-jambula",
@@ -143,11 +144,11 @@ export function ProjectSEO({
     "@type": "SoftwareApplication",
     name: title,
     description: description,
-    image: `https://nithinjambula.dev${image}`,
+    image: `${SITE_URL}${image}`,
     author: {
       "@type": "Person",
       name: "Nithin Jambula",
-      url: "https://nithinjambula.dev",
+      url: SITE_URL,
     },
     applicationCategory: "DeveloperApplication",
     offers: {

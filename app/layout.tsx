@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
+import { BASE_PATH, SITE_URL } from "@/lib/site"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     "Artificial Intelligence India", "ML Engineer India", "AI Startup", "Tech Portfolio", "Engineering Portfolio",
     "GitHub", "LinkedIn", "Open Source", "Research Papers", "Publications", "Conferences", "Hackathons"
   ],
-  authors: [{ name: "Nithin Jambula", url: "https://nithinjambula.dev" }],
+  authors: [{ name: "Nithin Jambula", url: SITE_URL }],
   creator: "Nithin Jambula",
   publisher: "Nithin Jambula",
   robots: {
@@ -61,27 +62,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'profile',
     locale: 'en_US',
-    url: 'https://nithinjambula.dev',
+    url: SITE_URL,
     siteName: 'Nithin Jambula - Machine Learning Engineer Portfolio',
     title: 'Nithin Jambula - ML Engineer | AI Specialist | Computer Vision Expert',
     description: 'Machine Learning Engineer specializing in Deep Learning, Computer Vision, Autonomous Systems, LLM Applications, and Neuro-Symbolic AI. Featured projects: EchoSight (Patent Pending), 16fps AI Video Generation, DeepShield Face-Swap Detection.',
     images: [
       {
-        url: 'https://nithinjambula.dev/og-image.jpg',
+        url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Nithin Jambula - Machine Learning Engineer Portfolio',
         type: 'image/jpeg',
       },
       {
-        url: 'https://nithinjambula.dev/profile-image.jpeg',
+        url: `${SITE_URL}/profile-image.jpeg`,
         width: 800,
         height: 600,
         alt: 'Nithin Jambula Profile Photo - ML Engineer at VIT-AP',
         type: 'image/jpeg',
       },
       {
-        url: 'https://nithinjambula.dev/echo.jpg',
+        url: `${SITE_URL}/echo.jpg`,
         width: 1024,
         height: 768,
         alt: 'EchoSight - Wearable Assistive Navigation Glasses by Nithin Jambula',
@@ -93,11 +94,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Nithin Jambula - ML Engineer | AI Specialist | Deep Learning Expert',
     description: 'Building AI systems, autonomous vehicles, and accessibility tech. Featured projects: EchoSight (Patented), 16fps Video AI, DeepShield Security.',
-    images: ['https://nithinjambula.dev/og-image.jpg'],
+    images: [`${SITE_URL}/og-image.jpg`],
     creator: '@nithin_jambula',
   },
   alternates: {
-    canonical: 'https://nithinjambula.dev',
+    canonical: SITE_URL,
   },
   category: 'technology',
   classification: 'Portfolio',
@@ -217,7 +218,7 @@ export const metadata: Metadata = {
     'social:github': 'https://github.com/nithin434',
     'social:linkedin': 'https://linkedin.com/in/nithin-jambula',
     'social:twitter': 'https://twitter.com/nithin434',
-    'social:portfolio': 'https://nithinjambula.dev',
+    'social:portfolio': SITE_URL,
     
     // Business & Professional
     'business-category': 'Technology Services',
@@ -242,72 +243,67 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: `${BASE_PATH}/favicon.ico`,
         sizes: "16x16 32x32 48x48",
         type: "image/x-icon"
       },
       {
-        url: "/icon-light-32x32.png",
+        url: `${BASE_PATH}/icon-light-32x32.png`,
         media: "(prefers-color-scheme: light)",
         sizes: "32x32",
         type: "image/png"
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: `${BASE_PATH}/icon-dark-32x32.png`,
         media: "(prefers-color-scheme: dark)",
         sizes: "32x32",
         type: "image/png"
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-        sizes: "any"
-      },
-      {
-        url: "/icon-16x16.png",
+        url: `${BASE_PATH}/icon-16x16.png`,
         sizes: "16x16",
         type: "image/png"
       },
       {
-        url: "/icon-96x96.png",
+        url: `${BASE_PATH}/icon-96x96.png`,
         sizes: "96x96",
         type: "image/png"
       },
       {
-        url: "/icon-192x192.png",
+        url: `${BASE_PATH}/icon-192x192.png`,
         sizes: "192x192",
         type: "image/png"
       },
       {
-        url: "/icon-512x512.png",
+        url: `${BASE_PATH}/icon-512x512.png`,
         sizes: "512x512",
         type: "image/png"
       }
     ],
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-      { url: "/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/apple-icon-152x152.png", sizes: "152x152", type: "image/png" }
+      { url: `${BASE_PATH}/apple-icon.png`, sizes: "180x180", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-57x57.png`, sizes: "57x57", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-60x60.png`, sizes: "60x60", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-72x72.png`, sizes: "72x72", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-76x76.png`, sizes: "76x76", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-114x114.png`, sizes: "114x114", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-120x120.png`, sizes: "120x120", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-144x144.png`, sizes: "144x144", type: "image/png" },
+      { url: `${BASE_PATH}/apple-icon-152x152.png`, sizes: "152x152", type: "image/png" }
     ],
     other: [
       {
         rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
+        url: `${BASE_PATH}/safari-pinned-tab.svg`,
         color: "#19c37d"
       },
       {
         rel: "shortcut icon",
-        url: "/favicon.ico"
+        url: `${BASE_PATH}/favicon.ico`
       },
       {
         rel: "fluid-icon",
-        url: "/fluid-icon.png"
+        url: `${BASE_PATH}/fluid-icon.png`
       }
     ]
   },
@@ -318,14 +314,14 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://nithinjambula.dev/#person",
+      "@id": `${SITE_URL}/#person`,
       "name": "Nithin Jambula",
       "givenName": "Nithin",
       "familyName": "Jambula",
-      "url": "https://nithinjambula.dev",
+      "url": SITE_URL,
       "image": {
         "@type": "ImageObject",
-        "url": "https://nithinjambula.dev/profile-image.jpg",
+        "url": `${SITE_URL}/profile-image.jpg`,
         "width": 400,
         "height": 400
       },
@@ -351,7 +347,7 @@ const structuredData = {
       "sameAs": [
         "https://linkedin.com/in/nithin-jambula",
         "https://github.com/nithin434",
-        "https://nithinjambula.dev",
+        SITE_URL,
         "https://twitter.com/nithin434",
         "https://scholar.google.com/citations?user=nithin434",
         "https://orcid.org/0000-0002-1234-5678",
@@ -386,29 +382,29 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://nithinjambula.dev/#website",
-      "url": "https://nithinjambula.dev",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
       "name": "Nithin Jambula Portfolio",
       "description": "Personal portfolio showcasing Machine Learning projects, AI research, and professional experience",
       "publisher": {
-        "@id": "https://nithinjambula.dev/#person"
+        "@id": `${SITE_URL}/#person`
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://nithinjambula.dev/?s={search_term_string}",
+        "target": `${SITE_URL}/?s={search_term_string}`,
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "WebPage",
-      "@id": "https://nithinjambula.dev/#webpage",
-      "url": "https://nithinjambula.dev",
+      "@id": `${SITE_URL}/#webpage`,
+      "url": SITE_URL,
       "name": "Nithin Jambula - ML Engineer | AI Specialist | Computer Vision Expert",
       "isPartOf": {
-        "@id": "https://nithinjambula.dev/#website"
+        "@id": `${SITE_URL}/#website`
       },
       "about": {
-        "@id": "https://nithinjambula.dev/#person"
+        "@id": `${SITE_URL}/#person`
       },
       "description": "Machine Learning Engineer specializing in Deep Learning, Computer Vision, and AI Applications at VIT-AP University",
       "breadcrumb": {
@@ -418,7 +414,7 @@ const structuredData = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://nithinjambula.dev"
+            "item": SITE_URL
           }
         ]
       }
@@ -443,31 +439,9 @@ export default function RootLayout({
         />
         
         {/* PWA Manifest */}
-        <link rel="manifest" href="/manifest.json" />
-        
-        {/* Favicons and Icons */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/icon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#19c37d" />
+        <link rel="manifest" href={`${BASE_PATH}/manifest.json`} />
         
         {/* Microsoft Tiles */}
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png" />
-        <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png" />
-        <meta name="msapplication-wide310x150logo" content="/ms-icon-310x150.png" />
-        <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png" />
         
         {/* Performance and Preloading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -477,16 +451,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://vitap.ac.in" />
         <link rel="dns-prefetch" href="https://github.com" />
         <link rel="dns-prefetch" href="https://linkedin.com" />
-        <link rel="dns-prefetch" href="https://nithinjambula.dev" />
+        <link rel="dns-prefetch" href={SITE_URL} />
         <link rel="dns-prefetch" href="https://16fps.syntexa.app" />
         <link rel="dns-prefetch" href="https://scholar.google.com" />
         <link rel="dns-prefetch" href="https://researchgate.net" />
         <link rel="dns-prefetch" href="https://pytorch.org" />
         <link rel="dns-prefetch" href="https://tensorflow.org" />
-        <link rel="prefetch" href="/CV.pdf" />
-        <link rel="prefetch" href="/Nithin_Jambula_CV.pdf" />
-        <link rel="preload" href="/profile-image.jpeg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/icon.svg" as="image" type="image/svg+xml" />
+        <link rel="prefetch" href={`${BASE_PATH}/CV.pdf`} />
+        <link rel="preload" href={`${BASE_PATH}/profile-image.jpeg`} as="image" type="image/jpeg" />
         
         {/* Security Headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
@@ -494,11 +466,6 @@ export default function RootLayout({
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
-        
-        {/* Resource Hints */}
-        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/pages/_app.js" />
         
         {/* Search Engine Verification - Add when ready for production */}
         {/* <meta name="google-site-verification" content="" /> */}
@@ -549,11 +516,11 @@ export default function RootLayout({
         <meta name="citation_author" content="Nithin Jambula" />
         <meta name="citation_publication_date" content="2024" />
         <meta name="citation_online_date" content="2024" />
-        <meta name="citation_fulltext_html_url" content="https://nithinjambula.dev" />
+        <meta name="citation_fulltext_html_url" content={SITE_URL} />
         
         {/* Social Media Optimization */}
         <meta property="article:author" content="Nithin Jambula" />
-        <meta property="article:publisher" content="https://nithinjambula.dev" />
+        <meta property="article:publisher" content={SITE_URL} />
         <meta property="profile:first_name" content="Nithin" />
         <meta property="profile:last_name" content="Jambula" />
         <meta property="profile:username" content="nithin434" />
@@ -590,25 +557,18 @@ export default function RootLayout({
         <meta name="prefers-color-scheme" content="light" />
         
         {/* Additional Links */}
-        <link rel="author" href="https://nithinjambula.dev" />
+        <link rel="author" href={SITE_URL} />
         <link rel="me" href="https://github.com/nithin434" />
         <link rel="me" href="https://linkedin.com/in/nithin-jambula" />
         <link rel="me" href="https://twitter.com/nithin434" />
         <link rel="me" href="https://scholar.google.com/citations?user=nithin434" />
-        <link rel="canonical" href="https://nithinjambula.dev" />
-        <link rel="alternate" type="application/rss+xml" title="Nithin Jambula Updates" href="/rss.xml" />
-        <link rel="alternate" type="application/atom+xml" title="Nithin Jambula Feed" href="/atom.xml" />
-        <link rel="search" type="application/opensearchdescription+xml" title="Nithin Jambula Search" href="/opensearch.xml" />
+        <link rel="canonical" href={SITE_URL} />
+        <link rel="alternate" type="application/rss+xml" title="Nithin Jambula Updates" href={`${BASE_PATH}/rss.xml`} />
+        <link rel="alternate" type="application/atom+xml" title="Nithin Jambula Feed" href={`${BASE_PATH}/atom.xml`} />
+        <link rel="search" type="application/opensearchdescription+xml" title="Nithin Jambula Search" href={`${BASE_PATH}/opensearch.xml`} />
         <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
-        <link rel="help" href="https://nithinjambula.dev/contact" />
-        <link rel="bookmark" href="https://nithinjambula.dev" title="Nithin Jambula Portfolio" />
-        
-        {/* Analytics Script */}
-        <script
-          defer
-          src="http://localhost:3001/script.js"
-          data-website-id="7303435b-1e8d-4ac4-80ea-5fce2a271927"
-        />
+        <link rel="help" href={`${SITE_URL}/contact`} />
+        <link rel="bookmark" href={SITE_URL} title="Nithin Jambula Portfolio" />
       </head>
       <body className={`font-sans antialiased`}>
         {children}

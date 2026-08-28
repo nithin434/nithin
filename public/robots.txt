@@ -60,16 +60,16 @@ User-agent: DiscordBot
 Allow: /
 
 # Disallow sensitive paths (if any exist)
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
+Disallow: /nithin/api/
+Disallow: /nithin/_next/
+Disallow: /nithin/admin/
 
 # Sitemap locations - Image and Page Sitemaps
-Sitemap: https://nithinjambula.dev/sitemap.xml
-Sitemap: https://nithinjambula.dev/sitemap-index.xml
-Sitemap: https://nithinjambula.dev/sitemap-pages.xml
-Sitemap: https://nithinjambula.dev/sitemap-projects.xml
-Sitemap: https://nithinjambula.dev/sitemap-images.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap-index.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap-pages.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap-projects.xml
+Sitemap: https://nithin434.github.io/nithin/sitemap-images.xml
 
 # Image crawler permissions
 User-agent: Googlebot-Image
@@ -88,4 +88,4 @@ Allow: /
 Crawl-delay: 1
 
 # Host preference
-Host: nithinjambula.dev
+Host: nithin434.github.io/nithin
