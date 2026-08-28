@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Nithin Jambula - Portfolio Updates</title>
     <subtitle>Latest updates from Machine Learning Engineer Nithin Jambula</subtitle>
-    <link href="https://nithin434.github.io/nithin/atom.xml" rel="self"/>
-    <link href="https://nithin434.github.io/nithin/"/>
-    <id>https://nithin434.github.io/nithin/</id>
+    <link href="https://nithin434.github.io/atom.xml" rel="self"/>
+    <link href="https://nithin434.github.io/"/>
+    <id>https://nithin434.github.io/</id>
     <updated>2025-01-01T00:00:00Z</updated>
     <author>
         <name>Nithin Jambula</name>
         <email>nithinjambula89@gmail.com</email>
-        <uri>https://nithin434.github.io/nithin</uri>
+        <uri>https://nithin434.github.io</uri>
     </author>
     <rights>© 2025 Nithin Jambula. All rights reserved.</rights>
     <category term="Machine Learning"/>
@@ -19,7 +19,7 @@
     
     <entry>
         <title>Portfolio Launch</title>
-        <id>https://nithin434.github.io/nithin/updates/portfolio-launch</id>
+        <id>https://nithin434.github.io/updates/portfolio-launch</id>
         <updated>2025-01-01T00:00:00Z</updated>
         <summary>Launched comprehensive portfolio showcasing ML engineering projects and AI expertise</summary>
         <content type="html">
@@ -46,7 +46,7 @@
     
     <entry>
         <title>Latest Projects Update</title>
-        <id>https://nithin434.github.io/nithin/updates/projects-update</id>
+        <id>https://nithin434.github.io/updates/projects-update</id>
         <updated>2025-01-01T00:00:00Z</updated>
         <summary>Recent developments in computer vision and AI agent projects</summary>
         <content type="html">

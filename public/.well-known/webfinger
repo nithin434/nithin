@@ -1,5 +1,5 @@
 {
-  "subject": "https://nithin434.github.io/nithin",
+  "subject": "https://nithin434.github.io",
   "aliases": [
     "https://www.nithin434.github.io/nithin",
     "acct:nithin434@github.com",
@@ -30,17 +30,17 @@
     {
       "rel": "self",
       "type": "application/jrd+json",
-      "href": "https://nithin434.github.io/nithin/.well-known/webfinger?resource=https://nithin434.github.io/nithin"
+      "href": "https://nithin434.github.io/.well-known/webfinger?resource=https://nithin434.github.io"
     },
     {
       "rel": "alternate",
       "type": "text/html", 
-      "href": "https://nithin434.github.io/nithin"
+      "href": "https://nithin434.github.io"
     },
     {
       "rel": "avatar",
       "type": "image/jpeg",
-      "href": "https://nithin434.github.io/nithin/profile-image.jpeg"
+      "href": "https://nithin434.github.io/profile-image.jpeg"
     },
     {
       "rel": "me",
@@ -57,12 +57,12 @@
     {
       "rel": "http://webfinger.net/rel/profile-page",
       "type": "text/html",
-      "href": "https://nithin434.github.io/nithin"
+      "href": "https://nithin434.github.io"
     },
     {
       "rel": "http://schemas.google.com/g/2010#updates-from",
       "type": "application/atom+xml",
-      "href": "https://nithin434.github.io/nithin/atom.xml"
+      "href": "https://nithin434.github.io/atom.xml"
     }
   ]
 }

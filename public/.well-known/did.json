@@ -19,7 +19,7 @@
     {
       "id": "did:web:nithin434.github.io/nithin#portfolio",
       "type": "Portfolio",
-      "serviceEndpoint": "https://nithin434.github.io/nithin"
+      "serviceEndpoint": "https://nithin434.github.io"
     },
     {
       "id": "did:web:nithin434.github.io/nithin#contact",

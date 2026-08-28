@@ -7,17 +7,17 @@
 
   <!-- Main Portfolio Page -->
   <url>
-    <loc>https://nithin434.github.io/nithin/</loc>
+    <loc>https://nithin434.github.io/</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/og-image.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/og-image.jpg</image:loc>
       <image:title>Nithin Jambula - Machine Learning Engineer Portfolio</image:title>
       <image:caption>AI-powered portfolio showcasing ML projects and expertise</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/profile-image.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/profile-image.jpg</image:loc>
       <image:title>Nithin Jambula Profile Photo</image:title>
       <image:caption>Machine Learning Engineer and AI Specialist</image:caption>
     </image:image>
@@ -25,7 +25,7 @@
 
   <!-- Projects Section (Virtual URLs for Deep Linking) -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=projects</loc>
+    <loc>https://nithin434.github.io/?q=projects</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -33,7 +33,7 @@
 
   <!-- Experience Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=experience</loc>
+    <loc>https://nithin434.github.io/?q=experience</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -41,7 +41,7 @@
 
   <!-- Skills/Tech Stack Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=skills</loc>
+    <loc>https://nithin434.github.io/?q=skills</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -49,7 +49,7 @@
 
   <!-- Education Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=education</loc>
+    <loc>https://nithin434.github.io/?q=education</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -57,7 +57,7 @@
 
   <!-- Certifications Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=certifications</loc>
+    <loc>https://nithin434.github.io/?q=certifications</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -65,27 +65,27 @@
 
   <!-- Gallery Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=gallery</loc>
+    <loc>https://nithin434.github.io/?q=gallery</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/car.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/car.jpg</image:loc>
       <image:title>Vulcan - Self Driving EV Car</image:title>
       <image:caption>Autonomous driving car for campus mobility</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/echo.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/echo.jpg</image:loc>
       <image:title>EchoSight Prototype</image:title>
       <image:caption>Wearable assistive navigation glasses for visually impaired</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/vlan.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/vlan.jpg</image:loc>
       <image:title>VLaunchpad Demo</image:title>
       <image:caption>Displaying Vulcan autonomous vehicle at innovation showcase</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://nithin434.github.io/nithin/vikas.jpg</image:loc>
+      <image:loc>https://nithin434.github.io/vikas.jpg</image:loc>
       <image:title>Innovation Award 2024</image:title>
       <image:caption>Vikas 2024 Innovation Challenge winner ceremony</image:caption>
     </image:image>
@@ -93,7 +93,7 @@
 
   <!-- Contact Section -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?q=contact</loc>
+    <loc>https://nithin434.github.io/?q=contact</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -101,7 +101,7 @@
 
   <!-- CV/Resume -->
   <url>
-    <loc>https://nithin434.github.io/nithin/CV.pdf</loc>
+    <loc>https://nithin434.github.io/CV.pdf</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -109,7 +109,7 @@
 
   <!-- External Projects -->
   <url>
-    <loc>https://nithin434.github.io/nithin/?external=16fps</loc>
+    <loc>https://nithin434.github.io/?external=16fps</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

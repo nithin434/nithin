@@ -3,16 +3,16 @@
   <channel>
     <title>Nithin Jambula - Updates</title>
     <description>Latest updates from Nithin Jambula's portfolio - Machine Learning Engineer, AI Specialist</description>
-    <link>https://nithin434.github.io/nithin</link>
+    <link>https://nithin434.github.io</link>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Nov 2024 00:00:00 GMT</lastBuildDate>
     <pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate>
     <ttl>1440</ttl>
-    <atom:link href="https://nithin434.github.io/nithin/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nithin434.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://nithin434.github.io/nithin/icon-192x192.png</url>
+      <url>https://nithin434.github.io/icon-192x192.png</url>
       <title>Nithin Jambula</title>
-      <link>https://nithin434.github.io/nithin</link>
+      <link>https://nithin434.github.io</link>
       <width>192</width>
       <height>192</height>
     </image>
@@ -20,8 +20,8 @@
     <item>
       <title>Portfolio Launch - AI-Powered Interactive Experience</title>
       <description>Launched new interactive portfolio with custom AI agent trained on GitHub data. Features real-time project updates and intelligent conversation capabilities.</description>
-      <link>https://nithin434.github.io/nithin</link>
-      <guid>https://nithin434.github.io/nithin/updates/portfolio-launch-2024</guid>
+      <link>https://nithin434.github.io</link>
+      <guid>https://nithin434.github.io/updates/portfolio-launch-2024</guid>
       <pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate>
       <category>Portfolio</category>
       <category>AI</category>
@@ -41,8 +41,8 @@
     <item>
       <title>EchoSight Project - Vikas 2024 Innovation Award Winner</title>
       <description>EchoSight, my wearable assistive navigation system for visually impaired users, wins Vikas 2024 Innovation Challenge. Patent pending for YOLO-based real-time object detection system.</description>
-      <link>https://nithin434.github.io/nithin/?q=echosight</link>
-      <guid>https://nithin434.github.io/nithin/projects/echosight-award-2024</guid>
+      <link>https://nithin434.github.io/?q=echosight</link>
+      <guid>https://nithin434.github.io/projects/echosight-award-2024</guid>
       <pubDate>Mon, 01 Jul 2024 00:00:00 GMT</pubDate>
       <category>Innovation</category>
       <category>Computer Vision</category>
@@ -54,7 +54,7 @@
       <title>16fps Multi-Video Generation Platform</title>
       <description>Completed development of 16fps autonomous video generation system using LangChain and Stable Video Diffusion. Commercial rights sold to media production company.</description>
       <link>https://16fps.syntexa.app</link>
-      <guid>https://nithin434.github.io/nithin/projects/16fps-completion-2024</guid>
+      <guid>https://nithin434.github.io/projects/16fps-completion-2024</guid>
       <pubDate>Wed, 15 May 2024 00:00:00 GMT</pubDate>
       <category>AI Agents</category>
       <category>Video Generation</category>

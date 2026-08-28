@@ -569,6 +569,12 @@ export default function RootLayout({
         <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
         <link rel="help" href={`${SITE_URL}/contact`} />
         <link rel="bookmark" href={SITE_URL} title="Nithin Jambula Portfolio" />
+        {/* Umami Analytics (self-hosted) */}
+        <script
+          defer
+          src="https://umami-ip.vercel.app/script.js"
+          data-website-id="e11be2c5-c4ed-4f96-a3ac-426074b5b96f"
+        />
       </head>
       <body className={`font-sans antialiased`}>
         {children}

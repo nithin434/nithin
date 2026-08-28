@@ -4,11 +4,11 @@
     <ShortName>Nithin Jambula</ShortName>
     <Description>Search Nithin Jambula's Portfolio - ML Engineer & AI Specialist</Description>
     <InputEncoding>UTF-8</InputEncoding>
-    <Image width="16" height="16" type="image/x-icon">https://nithin434.github.io/nithin/favicon.ico</Image>
-    <Image width="32" height="32" type="image/png">https://nithin434.github.io/nithin/icon-32x32.png</Image>
-    <Url type="text/html" template="https://nithin434.github.io/nithin/?q={searchTerms}"/>
-    <Url type="application/opensearchdescription+xml" rel="self" template="https://nithin434.github.io/nithin/opensearch.xml"/>
-    <moz:SearchForm>https://nithin434.github.io/nithin/</moz:SearchForm>
+    <Image width="16" height="16" type="image/x-icon">https://nithin434.github.io/favicon.ico</Image>
+    <Image width="32" height="32" type="image/png">https://nithin434.github.io/icon-32x32.png</Image>
+    <Url type="text/html" template="https://nithin434.github.io/?q={searchTerms}"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="https://nithin434.github.io/opensearch.xml"/>
+    <moz:SearchForm>https://nithin434.github.io/</moz:SearchForm>
     <Contact>nithinjambula89@gmail.com</Contact>
     <Tags>machine learning engineer AI computer vision portfolio</Tags>
     <Language>en-US</Language>

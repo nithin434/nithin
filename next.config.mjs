@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-// GitHub Pages project site: https://nithin434.github.io/nithin/
-// Override with NEXT_PUBLIC_BASE_PATH="" when serving from a domain root.
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/nithin"
+// GitHub Pages user site: https://nithin434.github.io/ — served from the domain
+// root, so no base path. Set NEXT_PUBLIC_BASE_PATH="/sub" to host under a subpath.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
 const nextConfig = {
   output: "export",
-  basePath,
+  basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
   trailingSlash: true,
   env: {
