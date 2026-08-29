@@ -9,7 +9,8 @@
 - [x] **Meta Descriptions** - Compelling descriptions under 160 characters
 - [x] **Keywords** - Comprehensive keyword strategy covering ML/AI domain
 - [x] **Open Graph** - Complete OG tags for social media sharing
-- [x] **Twitter Cards** - Optimized Twitter card metadata
+- [x] **Twitter Cards*
+* - Optimized Twitter card metadata
 - [x] **Structured Data** - JSON-LD schema for Person, Website, WebPage
 - [x] **Canonical URLs** - Proper canonical links to avoid duplicate content
 - [x] **Language Tags** - Language and region specification
