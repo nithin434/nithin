@@ -88,4 +88,4 @@ Allow: /
 Crawl-delay: 1
 
 # Host preference
-Host: nithin434.github.io/nithin
+Host: nithin434.github.io
